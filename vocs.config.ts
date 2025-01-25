@@ -11,7 +11,10 @@ export default defineConfig({
       {
         text: 'Introduction',
         collapsed: false,
-        items: [{ text: 'Cyber AI', link: '/' }],
+        items: [
+          { text: 'Cyber AI', link: '/' },
+          { text: 'Crypto Social Data All-in-One API', link: '/introduction/cyber-ai' },
+        ],
       },
       {
         text: 'API Reference',
