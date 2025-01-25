@@ -1,1 +1,3 @@
-This is a [Vocs](https://vocs.dev) project bootstrapped with the Vocs CLI.
+# Cyber AI
+
+Cyber AI is a platform that allows you to search for crypto-related information using natural language queries.
