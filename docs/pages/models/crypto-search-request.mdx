@@ -1,0 +1,13 @@
+# CryptoSearchRequest
+
+The request model for the crypto search API.
+
+## Properties
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| num_results | integer | Yes | Maximum number of results to return |
+| projects | ProjectRequestSetting | No | Project-specific settings |
+| query | string | Yes | The search query in natural language |
+| time_range | string | Yes | Time range for the search (e.g., "1d" for one day) |
+| type | CryptoSearchType | Yes | Search type (e.g., "neural") |
