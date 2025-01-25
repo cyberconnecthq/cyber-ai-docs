@@ -1,3 +1,72 @@
-# Search
+# Crypto Search API
 
-Hello world!
+This endpoint allows you to search for crypto-related information using natural language queries.
+
+## Endpoint
+
+```http
+POST /search
+```
+
+## Request Parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| num_results | integer | Yes | Maximum number of results to return |
+| projects.tweets.max_characters | integer | No | Maximum number of characters for tweet content |
+| query | string | Yes | The search query in natural language |
+| time_range | string | Yes | Time range for the search (e.g., "1d" for one day) |
+| type | string | Yes | Search type (e.g., "neural") |
+
+## Example Request
+
+```json
+{
+  "num_results": 10,
+  "projects": {
+    "tweets": {
+      "max_characters": 1000
+    }
+  },
+  "query": "What do you think about Cyber?",
+  "time_range": "1d",
+  "type": "neural"
+}
+```
+
+## Response Structure
+
+| Field | Type | Description |
+|-------|------|-------------|
+| code | integer | Response status code |
+| message | string | Response message |
+| result.projects | array | List of matching projects |
+| result.projects[].id | integer | Project ID |
+| result.projects[].name | string | Project name |
+| result.projects[].summary | string | Project description |
+
+## Example Response
+
+```json
+{
+  "code": 200,
+  "message": "success",
+  "result": {
+    "projects": [
+      {
+        "id": 123456,
+        "name": "Cyber",
+        "summary": "Cyber is a great project"
+      }
+    ]
+  }
+}
+```
+
+## Response Codes
+
+| Status Code | Description |
+|-------------|-------------|
+| 200 | Successful operation |
+| 400 | Bad Request - Invalid parameters |
+| 500 | Internal Server Error |
