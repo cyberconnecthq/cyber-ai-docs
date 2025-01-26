@@ -21,26 +21,17 @@ export default defineConfig({
         collapsed: false,
         items: [
           {
-            text: 'Search',
-            link: '/api-reference/search',
+            text: 'Semantic Search',
+            link: '/api-reference/semantic-search',
           },
-        ],
-      },
-      {
-        text: 'Models',
-        collapsed: false,
-        items: [
-          { text: 'BaseResponse', link: '/models/base-response' },
-          { text: 'CryptoSearchRequest', link: '/models/crypto-search-request' },
-          { text: 'CryptoSearchResponse', link: '/models/crypto-search-response' },
-          { text: 'CryptoSearchResult', link: '/models/crypto-search-result' },
-          { text: 'CryptoSearchType', link: '/models/crypto-search-type' },
-          { text: 'ProjectRequestSetting', link: '/models/project-request-setting' },
-          { text: 'ProjectResult', link: '/models/project-result' },
-          { text: 'TokenResult', link: '/models/token-result' },
-          { text: 'Tweet', link: '/models/tweet' },
-          { text: 'TweetSummary', link: '/models/tweet-summary' },
-          { text: 'TweetsRequestSetting', link: '/models/tweets-request-setting' },
+          {
+            text: 'Keyword Search',
+            link: '/api-reference/keyword-search',
+          },
+          {
+            text: 'Trending Projects',
+            link: '/api-reference/trending-projects',
+          },
         ],
       },
     ],

@@ -5,32 +5,22 @@ This endpoint allows you to search for crypto-related information using natural 
 ## Endpoint
 
 ```http
-POST /search
+POST /trending_projects
 ```
 
 ## Request Parameters
 
-| Parameter                      | Type    | Required | Description                                        |
-| ------------------------------ | ------- | -------- | -------------------------------------------------- |
-| num_results                    | integer | Yes      | Maximum number of results to return                |
-| projects.tweets.max_characters | integer | No       | Maximum number of characters for tweet content     |
-| query                          | string  | Yes      | The search query in natural language               |
-| time_range                     | string  | Yes      | Time range for the search (e.g., "1d" for one day) |
-| type                           | string  | Yes      | Search type (e.g., "neural")                       |
+| Parameter   | Type    | Required | Description                                        |
+| ----------- | ------- | -------- | -------------------------------------------------- |
+| num_results | integer | Yes      | Maximum number of results to return                |
+| time_range  | string  | Yes      | Time range for the search (e.g., "1d" for one day) |
 
 ## Example Request
 
 ```json
 {
   "num_results": 10,
-  "projects": {
-    "tweets": {
-      "max_characters": 1000
-    }
-  },
-  "query": "What do you think about Cyber?",
-  "time_range": "1d",
-  "type": "neural"
+  "time_range": "1d"
 }
 ```
 
@@ -40,7 +30,7 @@ POST /search
 | ------------------------- | ------- | ------------------------- |
 | code                      | integer | Response status code      |
 | message                   | string  | Response message          |
-| result.projects           | array   | List of matching projects |
+| result.projects           | array   | List of trending projects |
 | result.projects[].id      | integer | Project ID                |
 | result.projects[].name    | string  | Project name              |
 | result.projects[].summary | string  | Project description       |

@@ -1,10 +1,10 @@
 # Crypto Social Data All-in-One API
 
-This API consolidates crypto-related social media analytics and project data into a single endpoint. It fetches and processes discussions from multiple social media platforms—like Twitter—alongside project-specific on-chain data. Below is a summary of the core functionalities and typical use cases.
+This API consolidates crypto-related social media analytics and project data into a single endpoint. It fetches and processes discussions from multiple social media platforms—like Twitter—alongside project-specific on-chain data. Below is a summary of its core functionalities and typical use cases.
 
-## Example Use Cases
+## APIs
 
-### 1. Text Analysis & Project Extraction
+### 1. Semantic Search
 
 Given a passage:
 
@@ -14,6 +14,7 @@ The API can:
 
 - Identify `ProjectX`, `Solana`s AI tokens, and `Base` as recognized projects.
 - Return structured data:
+
   - **Name**: “ProjectX”, “Solana AI Token”, “Base”
   - **Twitter**: Official Twitter handles (if available)
   - **Contract Address**: On-chain references
@@ -21,18 +22,18 @@ The API can:
   - **Summary & Description**
   - **Information Source**: URLs to relevant references
 
-### 2. Trending Projects
+### 2. Keyword Search
 
-- **Input**: Time period, e.g., “Last 7 days”
-- **Output**: Projects with highest discussion volume across social media.
-  - Useful for discovering up-and-coming tokens or confirming popularity trends.
-
-### 3. Project Search & Discussion
-
-- **Input**: “Search for TokenXYZ”
+- **Input**: "tokenXYZ"
 - **Output**:
   - Project introduction
   - Latest mentions and discussions (with links to source).
+
+### 3. Trending Projects
+
+- **Input**: Time period, e.g., "1d"
+- **Output**: Projects with highest discussion volume across social media.
+  - Useful for discovering up-and-coming tokens or confirming popularity trends.
 
 ## Example Applications
 
