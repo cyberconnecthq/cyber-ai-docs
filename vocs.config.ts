@@ -14,6 +14,7 @@ export default defineConfig({
         items: [
           { text: 'Cyber AI', link: '/' },
           { text: 'Crypto Social Data All-in-One API', link: '/introduction/cyber-ai' },
+          { text: 'Early Access', link: '/early-access' },
         ],
       },
       {
