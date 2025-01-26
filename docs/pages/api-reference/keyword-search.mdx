@@ -10,24 +10,18 @@ POST /search
 
 ## Request Parameters
 
-| Parameter                      | Type    | Required | Description                                        |
-| ------------------------------ | ------- | -------- | -------------------------------------------------- |
-| num_results                    | integer | Yes      | Maximum number of results to return                |
-| projects.tweets.max_characters | integer | No       | Maximum number of characters for tweet content     |
-| query                          | string  | Yes      | The search query in natural language               |
-| time_range                     | string  | Yes      | Time range for the search (e.g., "1d" for one day) |
-| type                           | string  | Yes      | "keyword"                                          |
+| Parameter   | Type    | Required | Description                                        |
+| ----------- | ------- | -------- | -------------------------------------------------- |
+| num_results | integer | Yes      | Maximum number of results to return                |
+| query       | string  | Yes      | The search query in natural language               |
+| time_range  | string  | Yes      | Time range for the search (e.g., "1d" for one day) |
+| type        | string  | Yes      | "keyword"                                          |
 
 ## Example Request
 
 ```json
 {
   "num_results": 10,
-  "projects": {
-    "tweets": {
-      "max_characters": 1000
-    }
-  },
   "query": "Cyber",
   "time_range": "1d",
   "type": "keyword"
